@@ -1,0 +1,545 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/home.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+nav .logo img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+nav .logo img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.9s ease;
+  /* Smooth animation */
+}
+
+nav .logo img:hover {
+  transform: scaleX(-1);
+  /* Flip the image horizontally on hover */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  color: #ea1538;
+  background: white;
+}
+
+button {
+  background: #ea1538;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.4s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #d11230;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.header .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+/* Parallax Sections */
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.parallax-b1 {
+  background-image: url('images/b1.jpeg');
+}
+
+.parallax-b2 {
+  background-image: url('images/b2.jpeg');
+}
+
+.parallax-c1 {
+  background-image: url('images/c1.jpeg');
+}
+
+.parallax-c2 {
+  background-image: url('images/c2.jpeg');
+}
+
+.parallax-d {
+  background-image: url('images/d1.jpg');
+}
+
+/* Content Sections */
+.content {
+  padding: 2px 10px;
+  text-align: center;
+  background: #e4edf7;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000401;
+  color: #fff;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #ea1538;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+footer a:hover {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+  }
+}
+
+/*our project sections*/
+.parallax-achievements {
+  position: relative;
+  background: url('images/c1.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.achievements-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.achievements-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.achievements-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.achievements-stats div {
+  flex: 1;
+  text-align: center;
+}
+
+.achievements-stats h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #ff6600; /* Bright color for numbers */
+}
+
+.achievements-stats p {
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+/* Our Services Section Styling */
+.our-services {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 50px 20px;
+  position: relative;
+  background: url('images/c1.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.our-services h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-box {
+  background-color: #cbe5eb;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.service-box h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+
+/* About Us Section Styling */
+.parallax-about-us {
+  position: relative;
+  background: url('images/b1.jpeg') no-repeat center center fixed; /* Adjust image path */
+  background-size: cover;
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.about-us-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-us-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-us-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.about-us-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-us-stats div {
+  flex: 1;
+  text-align: center;
+}
+
+.about-us-stats h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #ff6600; /* Bright color for numbers */
+}
+
+.about-us-stats p {
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+
+/*  Contact Us Section Styling */
+.parallax-company-info {
+  position: relative;
+  background: url('images/d1.jpg') no-repeat center center fixed; /* Background Image */
+  background-size: cover;
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.company-info-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.company-info-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.company-info-overlay p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.company-info-overlay a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.company-info-overlay a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  margin-top: 30px;
+}
+
+.social-media h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.social-media a {
+  margin: 0 15px;
+}
+
+.social-media img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.1);
+}
+
+.social-media img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Makes the image circular */
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+/* why-choose-us Section Styling */
+.parallax-why-choose-us {
+  position: relative;
+  background: url('images/c2.jpeg') no-repeat center center fixed; /* Replace with your image */
+  background-size: cover;
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.why-choose-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.why-choose-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.why-choose-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.why-choose-box {
+  flex: 1;
+  text-align: center;
+}
+
+.why-choose-box h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #ff6600; /* Bright color for titles */
+}
+
+.why-choose-box p {
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.containerauto {
+  width: 100%;
+  height: 100vh;
+  background-color: #020412;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+h1 {
+  color: #fff;
+  font-size: 75px;
+
+}
+
+span {
+  color: #ff2424;
+
+}
